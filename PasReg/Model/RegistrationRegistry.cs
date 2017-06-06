@@ -39,7 +39,7 @@ namespace PasReg.Model
             }
             
             var fileName = GetRegistrationFileName(registration.Id.Value);
-            File.WriteAllText(fileName, JsonConvert.SerializeObject(registration));
+            File.WriteAllText(fileName, JsonConvert.SerializeObject(registration, Formatting.Indented));
         }
 
         public void Delete(Guid id)
