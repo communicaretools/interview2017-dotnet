@@ -5,7 +5,7 @@ namespace PasReg.Model
     public class Registration
     {
         public Guid? Id { get; set; }
-        public int PersonalId { get; set; }
+        public long PersonalId { get; set; }
         public string CodelistId { get; set; }
         public string Name { get; set; }
         public int Phone { get; set; }

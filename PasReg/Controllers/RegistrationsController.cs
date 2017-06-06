@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using PasReg.Model;
 
 namespace PasReg.Controllers
@@ -38,7 +40,13 @@ namespace PasReg.Controllers
         [HttpPost]
         public void Post([FromBody]Registration registration)
         {
-            logger.LogInformation("Post new registration for patient {0}", registration.Name);
+            if (registration == null)
+            {
+                logger.LogError("Registration was not provided on the correct format to POST api/registrations");
+                return;
+            }
+            
+            logger.LogInformation("Post new registration for patient {0}", registration?.Name);
             registrations.Save(registration);
         }
 

@@ -33,7 +33,7 @@ namespace PasReg.Model
 
         public void Save(Registration registration)
         {
-            if (registration.Id == null)
+            if (!registration.Id.HasValue)
             {
                 registration.Id = Guid.NewGuid();
             }
