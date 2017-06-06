@@ -18,6 +18,7 @@ const Add = {
     methods: {
         submit: function submit() {
             console.log('Ready to submit registration', this.registration);
+            // TODO: Submit data via POST to /api/registrations (NB: As JSON!)
         }
     }
 };

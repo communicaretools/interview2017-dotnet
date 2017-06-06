@@ -12,6 +12,10 @@ const app = new Vue({
     router: router
 });
 
+$.ajaxSetup({
+    contentType: 'application/json; charset=utf-8'
+});
+
 window.addEventListener('load',
     function() {
         app.$mount("#app");
