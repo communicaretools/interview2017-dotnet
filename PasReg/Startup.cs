@@ -34,6 +34,7 @@ namespace PasReg
             services.AddLogging();
 
             services.AddSingleton(new RegistrationRegistry("Data"));
+            services.AddSingleton(new StudyRegistry());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
