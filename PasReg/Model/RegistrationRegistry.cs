@@ -44,7 +44,11 @@ namespace PasReg.Model
 
         public void Delete(Guid id)
         {
-            File.Delete(GetRegistrationFileName(id));
+            var fileName = GetRegistrationFileName(id);
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
         }
 
         private string GetRegistrationFileName(Guid id)
