@@ -1,0 +1,13 @@
+<div ng-controller="ListController as list">
+    <ul class="list-group">
+        <li ng-repeat="reg in list.registrations" class="list-group-item">
+            <span class="pull-right">
+                    <span class="btn btn-xs btn-default" ng-click="list.remove(reg)">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </span>
+                </span>
+            {{reg.name}}
+        </li>
+    </ul>
+    <a href="#!/add" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add</a>
+</div>
