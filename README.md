@@ -7,6 +7,10 @@
 * Front-end: Velg fritt mellom vuejs og angularjs, begge med bootstrap
 * Backend: Velg fritt mellom nodejs og .net web api
 
+**Oppstart:**
+* For å kjøre programmet, start det fra Visual Studio
+* Systemet lagrer data i katalogen `PasReg\Data` (ignorert av git), kopier data fra `ExampleData` for å ha noe å jobbe med
+
 **User story:** Som en administrator ønsker jeg å kunne registrere en studiedeltager i en fritt valgt studie med opplysninger om fødselsnummer, kodeliste-id, navn, telefonnummer, epost, studie og gruppe innen studien. Studiene er predefinerte, og hvilke grupper man kan velge blant varierer fra studie til studie. Kodeliste-id er en kode som identifiserer pasienten innad i en studie.
 
 **Implementer** i denne rekkefølgen:
